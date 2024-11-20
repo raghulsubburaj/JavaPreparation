@@ -1,0 +1,10 @@
+package com.sample;
+
+public class AddEmployee {
+	
+	public String addEmployee() {
+		
+		return "Employee Added Successfully";
+	}
+
+}

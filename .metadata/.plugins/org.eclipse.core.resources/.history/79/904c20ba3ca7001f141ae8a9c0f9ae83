@@ -1,0 +1,19 @@
+package com.sample;
+
+import java.util.Scanner;
+
+public class UpdateEmployee {
+	
+	public void updateEmployee() {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter Employee Id : ");
+		
+		int empId = scan.nextInt();
+		
+		
+		
+	}
+
+}

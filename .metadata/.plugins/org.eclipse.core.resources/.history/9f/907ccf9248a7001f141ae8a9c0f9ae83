@@ -1,0 +1,9 @@
+package com.sample;
+
+public class DeleteEmployee {
+	
+	public void deleteEmployee() {
+		
+	}
+
+}

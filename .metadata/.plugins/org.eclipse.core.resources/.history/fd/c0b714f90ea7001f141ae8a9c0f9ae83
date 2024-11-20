@@ -1,0 +1,10 @@
+package com.sample;
+
+public class AddEmployee {
+	
+	public void addEmployee() {
+		
+		System.out.println("Employee Added Successfully");
+	}
+
+}

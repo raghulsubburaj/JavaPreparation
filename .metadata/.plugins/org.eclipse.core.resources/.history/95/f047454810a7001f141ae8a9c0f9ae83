@@ -1,0 +1,19 @@
+package com.sample;
+
+import java.util.Scanner;
+
+public class AddEmployee {
+	
+	public void addEmployee() {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter the employee name : ");
+		
+		String name = scan.next();
+		
+		System.out.println("Employee Added Successfully");
+		System.out.println("Employee name : " + name);
+	}
+
+}

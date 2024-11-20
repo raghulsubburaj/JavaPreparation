@@ -1,0 +1,38 @@
+package com.sample;
+
+import java.util.Scanner;
+
+public class AddEmployee {
+
+	public void addEmployee() {
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Enter the employee name : ");
+
+		String name = scan.nextLine();
+        int age;
+        
+        do {
+        	
+	System.err.println("Enter the Age : ");
+
+		age = scan.nextInt();
+		
+		if(age > 0) {
+			
+		   System.out.println("Employee age is : " + age);
+		  
+			
+		}
+
+        }
+        while(age < 0); 
+        	
+        	
+        
+		System.out.println("Employee Added Successfully");
+		System.out.println("Employee name : " + name + "Employee Age : " + age);
+	}
+
+}

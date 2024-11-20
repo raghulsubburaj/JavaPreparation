@@ -1,0 +1,40 @@
+package com.sample;
+
+import java.sql.DriverManager;
+
+public class DatabaseConnection {
+
+	
+	try
+	{
+
+		Class.forName("org.postgresql.Driver");
+
+		Connection	c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/testdb", "postgres", "123");
+
+		System.out.println("Opened database successfully");
+
+	}catch(
+	ClassNotFoundException e)
+	{
+
+		e.printStackTrace();
+		System.err.println("PostgreSQL JDBC Driver not found.");
+	}catch(
+	SQLException e)
+	{
+
+		e.printStackTrace();
+		System.err.println("Connection failed: " + e.getMessage());
+	}finally
+	{
+
+		if (c != null) {
+			try {
+				c.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

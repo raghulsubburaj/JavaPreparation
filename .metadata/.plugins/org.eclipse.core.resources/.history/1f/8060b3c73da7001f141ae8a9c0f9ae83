@@ -1,0 +1,46 @@
+package com.sample;
+
+import java.util.Scanner;
+
+public class Employee {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scann = new Scanner(System.in);
+
+		System.out.println("1. Add Employee");
+		System.out.println("2. Get Employee Data");
+		System.out.println("3. Delete Employee");
+		System.out.println("4. Update Employee");
+		int input = scann.nextInt();
+
+		AddEmployee addEmployee = new AddEmployee();
+		UpdateEmployee updateEmployee = new UpdateEmployee();
+
+		switch (input) {
+
+		case 1:
+
+			addEmployee.addEmployee();
+			break;
+
+		case 2:
+			updateEmployee.updateEmployee();
+			System.out.println("Get Employee details successfully");
+			break;
+
+		case 3:
+			System.out.println("Delete Employee details succesfully");
+			break;
+		case 4:
+			System.out.println("Update Employee details succesfully");
+			break;
+		default:
+			System.out.println("Enter invvalid Input");
+
+		}
+
+	}
+
+}

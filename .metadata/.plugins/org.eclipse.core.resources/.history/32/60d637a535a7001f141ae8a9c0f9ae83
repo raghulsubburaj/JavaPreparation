@@ -1,0 +1,89 @@
+package com.sample;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class AddEmployee {
+
+	public void addEmployee() throws SQLException {
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Enter the employee name : ");
+
+		String name = scan.next();
+
+		int age;
+
+		do {
+
+			System.out.println("Enter the Age : ");
+
+			age = scan.nextInt();
+
+			if (age > 0) {
+
+				System.out.println("Employee age is : " + age);
+
+			} else {
+				System.out.println("Employee age cannot be negative.. Please try again !!");
+			}
+
+		} while (age < 0);
+
+		System.out.println("Please Enter Gender : ");
+
+		String gender = scan.next();
+
+		System.out.println("Please Enter DOB : ");
+
+		String dob = scan.next();
+
+		System.out.println("Please Enter Marital Status : ");
+		String marital_status = scan.next();
+
+		System.out.println("Please Enter the fathers name  : ");
+		String father_name = scan.next();
+
+		System.out.println("Please Enter the mothers name  : ");
+		String mothers_name = scan.next();
+
+		System.out.println("Please Enter the Address  : ");
+		String address = scan.next();
+
+		System.out.println("Please Enter the mobile number  : ");
+		String mobile_number = scan.next();
+
+		System.out.println("Please Enter the joining Date  : ");
+		String joining_date = scan.next();
+
+		addEmployeeData(name, age, gender, dob, marital_status, father_name, mothers_name, address, mobile_number,
+				joining_date);
+
+		System.out.println("Employee Added Successfully");
+		System.out.println("Employee name : " + name + ", Employee Age : " + age + ", Employee Gender : " + gender
+				+ ", Employee DOB : " + dob + ", Employee Marital Status : " + marital_status
+				+ ", Employee fathers name : " + father_name + ", Employee mothers name : " + mothers_name
+				+ ", Employee Address : " + address + ", Employee Mobile number : " + mobile_number
+				+ ", Employee joining Date : " + joining_date);
+
+	}
+
+	public void addEmployeeData(String name, int age, String gender, String dob, String marital_status,
+			String father_name, String mothers_name, String address, String mobile_number, String joining_date) {
+             DatabaseConnection con = new DatabaseConnection();
+             Connection connection = null;
+			try {
+				connection = con.databaseConnection();
+			} catch (SQLException e) {
+				System.err.println(e);
+			}
+             
+             if(connection != null) {
+            	 
+            	 String query = "INSERT INTO employees (name, age, gender, dob, marital_status, fathers_name, mothers_name, address, mobile_number, joining_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+             }
+             
+	}
+}

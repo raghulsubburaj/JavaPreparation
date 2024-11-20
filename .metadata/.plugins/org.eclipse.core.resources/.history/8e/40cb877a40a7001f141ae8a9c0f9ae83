@@ -1,0 +1,23 @@
+package com.sample;
+
+import java.util.Scanner;
+
+public class UpdateEmployee {
+	
+	public void updateEmployeeData() {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter the Employee Id : ");
+		
+		int empId = scan.nextInt();
+		
+		GetEmployee getEmployee = new GetEmployee();
+		
+		getEmployee.getEmployeeData(empId);
+		
+		System.out.println();
+		
+	}
+
+}
