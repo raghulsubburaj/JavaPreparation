@@ -20,10 +20,10 @@ public class DatabaseConnection {
 
 		} catch (ClassNotFoundException e) {
 
-			System.err.println(e);
+			System.out.println(e);
 		} catch (SQLException e) {
 
-			System.err.println("Connection failed: " + e.getMessage());
+			System.out.println("Connection failed: " + e);
 		}
 
 //		try {
@@ -32,6 +32,7 @@ public class DatabaseConnection {
 //			
 //			System.out.println(e);
 //		}
+
 		return c;
 	}
 }

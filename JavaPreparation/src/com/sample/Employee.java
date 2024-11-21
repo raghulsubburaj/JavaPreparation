@@ -24,7 +24,7 @@ public class Employee {
 		case 1:
 
 			addEmployee.addEmployee();
-			//System.out.println("Added Employee details successfully");
+			// System.out.println("Added Employee details successfully");
 			break;
 
 		case 2:
@@ -34,7 +34,7 @@ public class Employee {
 
 		case 3:
 			deleteEmployee.deleteEmployee();
-			//System.out.println("Delete Employee details succesfully");
+			// System.out.println("Delete Employee details succesfully");
 			break;
 		case 4:
 			updateEmployee.updateEmployeeData();

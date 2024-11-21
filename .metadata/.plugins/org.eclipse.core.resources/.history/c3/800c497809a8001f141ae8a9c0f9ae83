@@ -1,0 +1,17 @@
+package com.sample;
+
+import java.util.Vector;
+
+public class VectorSample {
+
+	public static void main(String[] args) {
+		
+       Vector<String> vector = new Vector<String>();
+       
+       vector.add("Raghul");
+       vector.add("Ram");
+       
+       System.out.println("Vector Data : " + vector);
+	}
+
+}
