@@ -1,0 +1,40 @@
+package com.sample;
+
+import java.io.File;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+
+public class XMLTest {
+
+	public static void main(String[] args) {
+		
+   try {
+		
+		 File fs = new File("D:\\IO Operation\\TestXML.xml");
+		 
+		 DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		 
+	
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			
+			Document doc = db.parse(fs);
+			
+			doc.getDocumentElement().normalize();
+			
+			System.out.println("Root element: " + doc.getDocumentElement().getNodeName());  
+			
+			
+		} catch (Exception e) {
+			System.out.println(e);
+			e.printStackTrace();
+		}
+		 
+		 
+		 
+	}
+
+}

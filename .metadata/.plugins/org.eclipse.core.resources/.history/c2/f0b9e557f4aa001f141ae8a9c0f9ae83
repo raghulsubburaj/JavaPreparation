@@ -1,0 +1,31 @@
+package com.sample;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class FileOutputStreamTest {
+
+	public static void main(String[] args) {
+		
+		
+		String name = "Raghul";
+		try {
+			FileOutputStream fOutStream = new FileOutputStream("D:\\IO Operation\\Test.txt");
+			
+			byte byteName[] = name.getBytes();
+		    fOutStream.write(byteName);
+		    
+		    fOutStream.close();
+		    
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+			System.out.println(e);
+		}
+		
+		
+
+	
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.sample;
+
+public class FileOutputStreamTest {
+
+	public static void main(String[] args) {
+		
+		
+		
+		FileOutputStreamTest fOutStream = new FileOutputStreamTest("Test.txt");
+		
+		String name = "Raghul";
+
+	
+	}
+
+}
