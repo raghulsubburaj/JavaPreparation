@@ -14,29 +14,19 @@ import org.json.JSONObject;
 
 public class GetEmployee {
 
-	public JSONObject getEmployee() {
-		
-		JSONObject jsonData = new JSONObject();
+	public void getEmployee() {
 
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Enter Employee Id : ");
 
 		int empId = scan.nextInt();
-		
-		JSONObject employeeData = getEmployeeData(empId);
-		
-		//System.out.println(employeeData);
 
-		return employeeData;
-		
-		
+		getEmployeeData(empId);
 
-		
-		
 	}
 
-	public JSONObject getEmployeeData(int empId) {
+	public void getEmployeeData(int empId) {
 		
 		 JSONObject jObject = new JSONObject();
 		 
@@ -72,7 +62,7 @@ public class GetEmployee {
 					jObject.put("Status", rs.getString("status"));
 					jObject.put("JoiningDate", rs.getString("joining_date"));
 					
-					//System.out.println("Get Employee Data in Json : " + jObject);
+					System.out.println("Get Employee Data in Json : " + jObject);
 
 					/*
 					 * int employeeId = rs.getInt("empid"); String name = rs.getString("name"); int
@@ -84,7 +74,7 @@ public class GetEmployee {
 					 * rs.getString("status"); String joiningDate = rs.getString("joining_date");
 					 */
 
-					/* employeeMap.put("EmpId", String.valueOf(rs.getInt("empid")));
+					employeeMap.put("EmpId", String.valueOf(rs.getInt("empid")));
 					employeeMap.put("Name", rs.getString("name"));
 					employeeMap.put("Age", String.valueOf(rs.getInt("age")));
 					employeeMap.put("Gender", rs.getString("gender"));
@@ -97,13 +87,13 @@ public class GetEmployee {
 					employeeMap.put("Status", rs.getString("status"));
 					employeeMap.put("JoiningDate", rs.getString("joining_date"));
 
-					//System.out.println(employeeMap.entrySet());
+					System.out.println(employeeMap.entrySet());
 					System.out.println("Employee Details : ");
 					for (Map.Entry<String, String> empDetails : employeeMap.entrySet()) {
 
 						System.out.println(empDetails);
 
-					} */
+					}
 
 					/*
 					 * employeeMap.clear(); System.out.println("After clear Map : " + employeeMap);
@@ -139,7 +129,6 @@ public class GetEmployee {
 			}
 
 		}
-		return jObject;
 
 	}
 

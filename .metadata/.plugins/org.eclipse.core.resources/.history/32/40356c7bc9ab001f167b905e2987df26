@@ -2,8 +2,6 @@ package com.sample;
 
 import java.util.Scanner;
 
-import org.json.JSONObject;
-
 public class Employee {
 
 	public static void main(String[] args) {
@@ -21,8 +19,6 @@ public class Employee {
 		GetEmployee getEmployee = new GetEmployee();
 		UpdateEmployee updateEmployee = new UpdateEmployee();
 		DeleteEmployee deleteEmployee = new DeleteEmployee();
-
-		JSONObject jsonData = new JSONObject();
 		switch (input) {
 
 		case 1:
@@ -32,11 +28,9 @@ public class Employee {
 			break;
 
 		case 2:
-
-			JSONObject employee = getEmployee.getEmployee();
+			getEmployee.getEmployee();
 			
-			System.out.println("Get Employee Data : " + employee);
-
+			
 			// System.out.println("Get Employee details successfully");
 			break;
 

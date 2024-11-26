@@ -26,7 +26,7 @@ public class GetEmployee {
 		
 		JSONObject employeeData = getEmployeeData(empId);
 		
-		//System.out.println(employeeData);
+		System.out.println(employeeData);
 
 		return employeeData;
 		
@@ -84,7 +84,7 @@ public class GetEmployee {
 					 * rs.getString("status"); String joiningDate = rs.getString("joining_date");
 					 */
 
-					/* employeeMap.put("EmpId", String.valueOf(rs.getInt("empid")));
+					employeeMap.put("EmpId", String.valueOf(rs.getInt("empid")));
 					employeeMap.put("Name", rs.getString("name"));
 					employeeMap.put("Age", String.valueOf(rs.getInt("age")));
 					employeeMap.put("Gender", rs.getString("gender"));
@@ -103,7 +103,7 @@ public class GetEmployee {
 
 						System.out.println(empDetails);
 
-					} */
+					}
 
 					/*
 					 * employeeMap.clear(); System.out.println("After clear Map : " + employeeMap);

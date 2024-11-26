@@ -26,7 +26,7 @@ public class GetEmployee {
 		
 		JSONObject employeeData = getEmployeeData(empId);
 		
-		//System.out.println(employeeData);
+		System.out.println(employeeData);
 
 		return employeeData;
 		

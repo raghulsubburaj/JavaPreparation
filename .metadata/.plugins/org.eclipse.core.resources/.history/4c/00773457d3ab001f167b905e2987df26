@@ -33,9 +33,7 @@ public class Employee {
 
 		case 2:
 
-			JSONObject employee = getEmployee.getEmployee();
-			
-			System.out.println("Get Employee Data : " + employee);
+			getEmployee.getEmployee();
 
 			// System.out.println("Get Employee details successfully");
 			break;

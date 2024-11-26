@@ -10,36 +10,21 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-import org.json.JSONObject;
-
 public class GetEmployee {
 
-	public JSONObject getEmployee() {
-		
-		JSONObject jsonData = new JSONObject();
+	public void getEmployee() {
 
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Enter Employee Id : ");
 
 		int empId = scan.nextInt();
-		
-		JSONObject employeeData = getEmployeeData(empId);
-		
-		//System.out.println(employeeData);
 
-		return employeeData;
-		
-		
+		getEmployeeData(empId);
 
-		
-		
 	}
 
-	public JSONObject getEmployeeData(int empId) {
-		
-		 JSONObject jObject = new JSONObject();
-		 
+	public void getEmployeeData(int empId) {
 
 		DatabaseConnection con = new DatabaseConnection();
 		Connection connection = null;
@@ -58,21 +43,6 @@ public class GetEmployee {
 				ResultSet rs = pstate.executeQuery();
 
 				while (rs.next()) {
-					
-					jObject.put("EmpID", rs.getInt("empID"));
-					jObject.put("Name", rs.getString("name"));
-					jObject.put("Age", rs.getInt("age"));
-					jObject.put("Gender", rs.getString("gender"));
-					jObject.put("DOB", rs.getString("dob"));
-					jObject.put("MaritalStatus", rs.getString("marital_status"));
-					jObject.put("FathersName",  rs.getString("fathers_name"));
-					jObject.put("MothersName", rs.getString("mothers_name"));
-					jObject.put("Address", rs.getString("address"));
-					jObject.put("MobileNumber", rs.getString("mobile_number"));
-					jObject.put("Status", rs.getString("status"));
-					jObject.put("JoiningDate", rs.getString("joining_date"));
-					
-					//System.out.println("Get Employee Data in Json : " + jObject);
 
 					/*
 					 * int employeeId = rs.getInt("empid"); String name = rs.getString("name"); int
@@ -84,26 +54,26 @@ public class GetEmployee {
 					 * rs.getString("status"); String joiningDate = rs.getString("joining_date");
 					 */
 
-					/* employeeMap.put("EmpId", String.valueOf(rs.getInt("empid")));
+					employeeMap.put("EmpId", String.valueOf(rs.getInt("empid")));
 					employeeMap.put("Name", rs.getString("name"));
 					employeeMap.put("Age", String.valueOf(rs.getInt("age")));
 					employeeMap.put("Gender", rs.getString("gender"));
 					employeeMap.put("DOB", rs.getString("dob"));
 					employeeMap.put("MaritalStatus", rs.getString("marital_status"));
-					employeeMap.put("FathersName", rs.getString("fathers_name"));
-					employeeMap.put("MothersName", rs.getString("mothers_name"));
-					employeeMap.put("Address", rs.getString("address"));
+					employeeMap.put("FathersName", rs.getString("mothers_name"));
+					employeeMap.put("MothersName", rs.getString("address"));
+					employeeMap.put("Address", rs.getString("mobile_number"));
 					employeeMap.put("MobileNumber", rs.getString("mobile_number"));
 					employeeMap.put("Status", rs.getString("status"));
 					employeeMap.put("JoiningDate", rs.getString("joining_date"));
 
-					//System.out.println(employeeMap.entrySet());
+					System.out.println(employeeMap.entrySet());
 					System.out.println("Employee Details : ");
 					for (Map.Entry<String, String> empDetails : employeeMap.entrySet()) {
 
 						System.out.println(empDetails);
 
-					} */
+					}
 
 					/*
 					 * employeeMap.clear(); System.out.println("After clear Map : " + employeeMap);
@@ -139,7 +109,6 @@ public class GetEmployee {
 			}
 
 		}
-		return jObject;
 
 	}
 
